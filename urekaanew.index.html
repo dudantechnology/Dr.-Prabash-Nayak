@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urekka Health Care | Dr. Prabash Nayak – Urologist Surgeon &amp; Andrologist, Cuttack</title>
+<meta name="description" content="Urekka Health Care – Dr. Prabash Nayak, Urologist Surgeon &amp; Andrologist in Mahanadi Vihar, Cuttack. Share your experience, save contact details, call, WhatsApp or get directions.">
+<meta name="theme-color" content="#1F7A85">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---------- THEME (taken from the Urekka brochure): change for another business ---------- */
+  :root{
+    --primary:#1F7A85;      /* brochure teal, darkened so white text on it = 5:1 */
+    --primary-dark:#165F68;
+    --charcoal:#2E3A3F;     /* brochure dark facets */
+    --blue:#2F7FC0;         /* brochure "UREKKA" wordmark blue */
+    --green:#4CAF50;        /* brochure "+" mark */
+    --star:#D4A23A;         /* gold stars (decorative) */
+    --bg:#EEF3F3;           /* off-white base */
+    --ink:#18262C;          /* main text */
+    --muted:#3F4D56;        /* secondary text */
+    --glass:rgba(255,255,255,.74);        /* frosted panels */
+    --glass-soft:rgba(255,255,255,.58);   /* controls inside panels */
+    --glass-border:rgba(255,255,255,.8);
+    --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:"DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --shadow:0 10px 32px rgba(20,60,70,.16);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;min-height:100vh}
+  img,svg,iframe{max-width:100%}
+  a{color:var(--primary)}
+  .wrap{position:relative;max-width:480px;margin:0 auto;padding:24px 16px 40px}
+  .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  :where(a,button):focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:12px}
+  .btn-primary:focus-visible,.pill[aria-pressed="true"]:focus-visible{outline-color:var(--charcoal)}
+
+  /* ---------- Faceted brochure background ---------- */
+  .bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(160deg,#F6F9F9 0%,#E4EEEF 100%)}
+  .bg svg{position:absolute;inset:0;width:100%;height:100%;max-width:none}
+
+  /* ---------- Glass panels ---------- */
+  .card{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border:1px solid var(--glass-border);border-radius:24px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.9);padding:20px 18px;margin-bottom:18px}
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card{background:rgba(255,255,255,.93)}}
+  @media (prefers-reduced-transparency:reduce){.card{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,255,255,.96)}}
+
+  .rule{height:1px;border:0;margin:18px 0;background:linear-gradient(90deg,transparent,var(--primary),var(--blue),transparent);opacity:.55}
+  .label{font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+
+  /* ---------- Header ---------- */
+  .hero{text-align:center;padding:24px 18px 22px}
+  .logo{width:104px;height:104px;margin:0 auto 12px;display:block;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--primary),0 8px 24px rgba(20,60,70,.22);object-fit:cover;object-position:center 35%;background:#fff}
+  .brand{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,9vw,2.4rem);line-height:1.1;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:0}
+  .hc{display:flex;align-items:center;gap:10px;margin:2px auto 12px;max-width:260px;font-size:.9rem;color:var(--muted)}
+  .hc::before,.hc::after{content:"";flex:1;height:1px;background:var(--muted);opacity:.55}
+  .doc{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:0}
+  .biz-type{margin:2px 0 0;color:var(--muted);font-size:.98rem}
+  .stars{color:var(--star);font-size:1.7rem;letter-spacing:.2em;margin:14px 0 4px;padding-left:.2em}
+  .eyebrow{margin:0;font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- Pills ---------- */
+  .pills{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+  .pill{min-height:34px;padding:0 11px;border-radius:999px;border:1.5px solid var(--glass-border);background:var(--glass-soft);box-shadow:0 2px 8px rgba(20,60,70,.08),inset 0 1px 0 rgba(255,255,255,.9);color:var(--ink);font:500 .8rem var(--sans);cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .1s}
+  .pill[aria-pressed="true"]{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-color:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(31,122,133,.4),inset 0 1px 0 rgba(255,255,255,.3)}
+  .pill:active{transform:scale(.96)}
+  @media (hover:hover){.pill:hover{border-color:var(--primary)}}
+
+  /* ---------- Language switch ---------- */
+  .lang-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;font-size:.82rem;font-weight:700;letter-spacing:.14em}
+  .lang-row span{color:var(--muted);transition:color .15s}
+  .lang-row span.on{color:var(--primary)}
+  .switch{min-width:64px;min-height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .switch .track{width:52px;height:30px;border-radius:999px;background:#7E8E96;position:relative;transition:background .2s;box-shadow:inset 0 1px 3px rgba(0,0,0,.25)}
+  .switch .thumb{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.3);transition:transform .2s}
+  .switch[aria-checked="true"] .track{background:var(--primary)}
+  .switch[aria-checked="true"] .thumb{transform:translateX(22px)}
+
+  /* ---------- Review box ---------- */
+  .reviews{display:grid;gap:10px;margin-bottom:10px}
+  .review{display:block;position:relative;cursor:pointer;background:var(--glass-soft);border:1.5px solid var(--glass-border);box-shadow:inset 0 1px 0 rgba(255,255,255,.9);border-radius:18px;padding:14px 16px;transition:border-color .15s,box-shadow .15s}
+  .review.sel{border-color:var(--primary);box-shadow:0 0 0 3px rgba(31,122,133,.22),inset 0 1px 0 rgba(255,255,255,.9)}
+  .review:has(input:focus-visible){outline:3px solid var(--primary);outline-offset:3px}
+  .rv-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  .rv-head .label{margin:0}
+  .dot{width:22px;height:22px;border-radius:50%;border:2px solid #7E8E96;background:#fff;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:700;line-height:1;transition:background .15s,border-color .15s}
+  .review.sel .dot{background:var(--primary);border-color:var(--primary)}
+  .review-text{margin:0;font-size:1rem;line-height:1.65;overflow-wrap:anywhere}
+  .hint{margin:0 0 14px;font-size:.84rem;color:var(--muted)}
+  .actions{display:flex;gap:10px}
+
+  /* ---------- Buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:16px;font:700 .92rem var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1.5px solid var(--primary);transition:background .15s,transform .1s,box-shadow .15s;text-align:center}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 6px 18px rgba(31,122,133,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn-outline{background:var(--glass-soft);color:var(--primary-dark);border-color:rgba(31,122,133,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+  .btn:active{transform:scale(.98)}
+  @media (hover:hover){.btn-primary:hover{box-shadow:0 8px 24px rgba(31,122,133,.5),inset 0 1px 0 rgba(255,255,255,.3)}.btn-outline:hover{background:rgba(255,255,255,.85)}}
+  .btn-block{width:100%}
+  .actions .btn-primary{flex:1}
+  .btn-square{width:52px;padding:0;font-size:1.5rem;line-height:1;flex:none}
+
+  /* ---------- Icon tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+  .tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:92px;padding:14px 6px;border-radius:20px;border:1px solid var(--glass-border);background:var(--glass-soft);box-shadow:0 2px 10px rgba(20,60,70,.08),inset 0 1px 0 rgba(255,255,255,.9);color:var(--ink);text-decoration:none;font-size:.85rem;font-weight:500;text-align:center;transition:transform .1s,border-color .15s,box-shadow .15s}
+  .tile svg{width:28px;height:28px;color:var(--primary);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .tile:active{transform:scale(.97)}
+  @media (hover:hover){.tile:hover{border-color:var(--primary);box-shadow:var(--shadow)}}
+
+  /* ---------- Phone numbers ---------- */
+  .numbers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .num{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 10px;border-radius:14px;border:1px solid var(--glass-border);background:var(--glass-soft);box-shadow:inset 0 1px 0 rgba(255,255,255,.9);color:var(--ink);text-decoration:none;font-weight:500;font-size:.92rem;white-space:nowrap}
+  .num svg{width:16px;height:16px;color:var(--primary);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  @media (hover:hover){.num:hover{border-color:var(--primary)}}
+
+  /* ---------- Location + story ---------- */
+  h2{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:0 0 8px}
+  .address{margin:0 0 14px;color:var(--muted)}
+  .map{position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:1px solid var(--glass-border);box-shadow:0 4px 16px rgba(20,60,70,.12);background:var(--bg)}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .maplink{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;font-weight:700;color:var(--primary-dark)}
+  .story h2{text-transform:uppercase;letter-spacing:.12em;font-size:1.1rem}
+  .story p{margin:0 0 12px}
+  .story p:last-child{margin-bottom:0}
+
+  /* ---------- Footer ---------- */
+  .footer{text-align:center;padding:22px 18px 20px}
+  .footer h2{text-transform:uppercase;letter-spacing:.14em;font-size:1.05rem}
+  .footer p{margin:0 0 16px;color:var(--muted)}
+  .footer .btns{display:flex;flex-direction:column;gap:10px}
+  .footer p.copy{font-size:.82rem;margin:22px 0 0}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+  }
+</style>
+</head>
+<body>
+<!-- Faceted teal / charcoal shapes from the Urekka brochure, sitting behind the glass panels -->
+<div class="bg" aria-hidden="true">
+  <svg viewBox="0 0 400 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,0 130,0 60,110 0,150" fill="#3E9FA8"/>
+    <polygon points="130,0 270,0 160,90 60,110" fill="#58B7BC"/>
+    <polygon points="0,150 60,110 120,220 0,260" fill="#2E3A3F" opacity=".92"/>
+    <polygon points="60,110 160,90 190,210 120,220" fill="#6CC4C8"/>
+    <polygon points="0,260 120,220 170,330 0,400" fill="#4AA8AF"/>
+    <polygon points="120,220 190,210 170,330" fill="#2E3A3F" opacity=".85"/>
+    <polygon points="0,400 170,330 140,470 0,560" fill="#3A98A2"/>
+    <polygon points="0,560 140,470 190,600 60,700" fill="#86CFD2"/>
+    <polygon points="60,700 190,600 160,800 40,800" fill="#2E3A3F" opacity=".9"/>
+    <polygon points="0,700 60,700 40,800 0,800" fill="#4AA8AF"/>
+    <polygon points="330,40 385,15 358,95" fill="#2E3A3F" opacity=".8"/>
+    <polygon points="385,15 400,15 400,75" fill="#3E9FA8"/>
+    <polygon points="400,610 350,745 400,800" fill="#58B7BC"/>
+    <polygon points="350,745 400,800 320,800" fill="#2E3A3F" opacity=".9"/>
+  </svg>
+</div>
+
+<main class="wrap">
+
+  <!-- 1. HEADER & RATING -->
+  <header class="hero card">
+    <div id="logoSlot"></div>
+    <h1 class="brand" data-bind="brand">Urekka</h1>
+    <p class="hc"><span>Health Care</span></p>
+    <p class="doc" data-bind="name">Dr. Prabash Nayak</p>
+    <p class="biz-type" data-bind="type">Urologist Surgeon &amp; Andrologist</p>
+    <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+    <p class="eyebrow">Share your experience</p>
+  </header>
+
+  <!-- 2. REVIEW GENERATOR -->
+  <section class="card" aria-labelledby="genTitle">
+    <h2 id="genTitle" class="sr-only">Create your review</h2>
+    <p class="label" id="pillLabel">What stood out?</p>
+    <ul class="pills" id="pills" aria-labelledby="pillLabel"></ul>
+
+    <div class="lang-row">
+      <span id="lblEn" class="on">ENGLISH</span>
+      <button type="button" class="switch" id="langSwitch" role="switch" aria-checked="false" aria-label="Switch review language between English and Hinglish">
+        <span class="track"><span class="thumb"></span></span>
+      </button>
+      <span id="lblHi">HINGLISH</span>
+    </div>
+
+    <p class="label" id="reviewLabel">YOUR REVIEW</p>
+    <div class="reviews" role="radiogroup" aria-labelledby="reviewLabel" aria-live="polite">
+      <label class="review sel" id="cardLong">
+        <input type="radio" name="reviewPick" value="long" class="sr-only" checked>
+        <span class="rv-head"><span class="label" id="tagLong">LONG</span><span class="dot" aria-hidden="true">✓</span></span>
+        <p class="review-text" id="textLong"></p>
+      </label>
+      <label class="review" id="cardShort">
+        <input type="radio" name="reviewPick" value="short" class="sr-only">
+        <span class="rv-head"><span class="label" id="tagShort">SHORT</span><span class="dot" aria-hidden="true">✓</span></span>
+        <p class="review-text" id="textShort"></p>
+      </label>
+    </div>
+    <p class="hint" id="reviewHint"></p>
+
+    <div class="actions">
+      <button type="button" class="btn btn-primary" id="copyBtn">Copy &amp; paste on Google</button>
+      <button type="button" class="btn btn-outline btn-square" id="shuffleBtn" aria-label="Generate a new review">↻</button>
+    </div>
+    <p class="sr-only" id="copyStatus" role="status"></p>
+  </section>
+
+  <!-- 3. CONTACT & SOCIAL HUB -->
+  <section class="card" aria-labelledby="contactTitle">
+    <h2 id="contactTitle" class="sr-only">Quick contact</h2>
+    <button type="button" class="btn btn-primary btn-block" id="saveContact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Save Contact
+    </button>
+    <div class="tiles" id="tiles"></div>
+    <div class="numbers" id="numbers"></div>
+  </section>
+
+  <!-- 4. LOCATION & STORY -->
+  <section class="card" aria-labelledby="locTitle">
+    <h2 id="locTitle">Find Us</h2>
+    <p class="address" id="addressText"></p>
+    <div class="map"><iframe id="mapFrame" title="Map showing the clinic location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <a class="maplink" id="mapLink" target="_blank" rel="noopener">Open in Google Maps →</a>
+    <hr class="rule">
+    <div class="story" id="story"></div>
+  </section>
+
+  <footer class="footer card">
+    <h2>Visit &amp; Connect</h2>
+    <p id="footText"></p>
+    <div class="btns">
+      <a class="btn btn-primary" id="footFollow" target="_blank" rel="noopener"></a>
+      <a class="btn btn-outline" id="footReview" target="_blank" rel="noopener">Leave a Review</a>
+    </div>
+    <p class="copy" id="copyright"></p>
+  </footer>
+</main>
+
+<script>
+/* Profile photo, embedded (360x360 JPEG). Replace the whole string to change the photo. */
+const PROFILE_PHOTO = "data:image/jpeg;base64,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";
+</script>
+<script>
+/* =====================================================================
+   CONFIG — everything business-specific lives in the three blocks below
+   (CONFIG, CATEGORIES, COPY). To reuse this page for another business,
+   edit only these blocks (and the colours in :root, the background
+   shapes, the <title> and the meta description above). Leave a link as
+   "" to hide its button/tile.
+   ===================================================================== */
+const CONFIG = {
+  brand: "Urekka",                                   // wordmark in the header ("Health Care" sits under it in the HTML)
+  brandFull: "Urekka Health Care",                   // used in vCard, copyright, logo label
+  name: "Dr. Prabash Nayak",                         // doctor / person name
+  type: "Urologist Surgeon & Andrologist",           // business type line
+  vcardFirst: "Prabash", vcardLast: "Nayak", vcardPrefix: "Dr.",
+
+  // Address parts (used for display, vCard and the Google Maps embed)
+  street: "Haramani Mandapa Road, Mahanadi Vihar – Nayabazar Road, Mahanadi Vihar",
+  city: "Cuttack", region: "Odisha", postal: "753004", country: "India",
+
+  phone: "7381995599",   // MAIN number: 10 digits only; page adds +91 for tel: and wa.me/91…
+  morePhones: ["7381885588", "7787000222", "7789000222"],   // other numbers (from the brochure)
+  waText: "Hello",
+
+  // CHANGE: replace with https://search.google.com/local/writereview?placeid=PLACE_ID
+  // (find the Place ID in Google Business Profile). The shared profile link works until then.
+  googleReviewLink: "https://share.google/lOOLIWZw23YOouQjb",
+  googlePageLink:   "https://share.google/lOOLIWZw23YOouQjb",
+  instagram: "",   // e.g. https://instagram.com/yourpage  ("" hides it)
+  facebook:  "",   // e.g. https://facebook.com/yourpage
+  website:   "",   // e.g. https://example.com
+
+  // Profile photo / logo shown in the header circle. PROFILE_PHOTO is embedded at the bottom of this file
+  // so the page stays a single file. To change it: set logoSrc to "photo.jpg" (file next to index.html),
+  // or "" for the simple "UHC+" placeholder icon.
+  logoSrc: PROFILE_PHOTO,
+  logoAlt: "Photo of Dr. Prabash Nayak",
+
+  // true = every time the page opens, 2 or 3 random pills are pre-selected (so each visitor sees a different review).
+  // false = page opens with "All" selected.
+  autoSelectOnOpen: true
+};
+CONFIG.initials = "UHC";                              // used by the placeholder logo
+CONFIG.fullAddress = CONFIG.street + ", " + CONFIG.city + ", " + CONFIG.region + " " + CONFIG.postal;
+
+/* Review pills. id must match the keys in COPY.*.phrases. "all" is special (exclusive). */
+const CATEGORIES = [
+  { id: "behaviour",   label: "Doctor's Behaviour" },
+  { id: "explanation", label: "Clear Explanation" },
+  { id: "care",        label: "Treatment & Care" },
+  { id: "privacy",     label: "Privacy & Comfort" },
+  { id: "clean",       label: "Clean Clinic" },
+  { id: "staff",       label: "Staff & Support" },
+  { id: "value",       label: "Value for Money" },
+  { id: "pharmacy",    label: "Pharmacy Services" },
+  { id: "hospitality", label: "Hospitality & Quality Care" },
+  { id: "location",    label: "Location & Parking" },
+  { id: "lab",         label: "Lab Test Facilities" },
+  { id: "reception",   label: "Reception & Waiting Hall" },
+  { id: "surgery",     label: "Surgery & Recovery" },
+  { id: "all",         label: "All" }
+];
+
+/* Review wording. Phrases are lowercase clauses with NO final full stop so they
+   work after connectors. Keep them honest, specific and free of invented facts. */
+const COPY = {
+  en: {
+    cardLabel: "YOUR REVIEW",
+    longLabel: "LONG", shortLabel: "SHORT",
+    hint: "Tap a review to choose it, then tweak the text so it matches your own visit before you post.",
+    intros: [
+      "I recently visited Dr. Prabash Nayak for a consultation.",
+      "Had a consultation with Dr. Prabash Nayak recently.",
+      "Sharing my experience of visiting Dr. Prabash Nayak's clinic.",
+      "I consulted Dr. Prabash Nayak and wanted to share my experience."
+    ],
+    connectors: ["Also,", "On top of that,", "Along with this,", "I also noticed that", "Additionally,"],
+    closers: [
+      "I would recommend him to anyone looking for a urologist in Cuttack.",
+      "Thank you, Dr. Nayak and team.",
+      "Happy with the overall experience.",
+      "Thanks to the whole team for the support."
+    ],
+    // Used for the SHORT review (1 or 2 phrases only)
+    shortIntros: [
+      "Good experience at Dr. Prabash Nayak's clinic.",
+      "Visited Dr. Prabash Nayak recently.",
+      "Happy with my visit to Dr. Prabash Nayak."
+    ],
+    shortConnectors: ["Also,", "Additionally,"],
+    shortClosers: ["Recommended.", "Thank you, Dr. Nayak and team.", "Would recommend."],
+    phrases: {
+      behaviour: [
+        "the doctor was polite and listened to me patiently",
+        "Dr. Nayak's behaviour was humble and very respectful",
+        "he took time to hear my concerns without rushing",
+        "the doctor was friendly and made me feel at ease from the start"
+      ],
+      explanation: [
+        "the problem and the next steps were explained in simple words",
+        "all my questions were answered clearly",
+        "the doctor explained the options so I could understand before deciding",
+        "nothing felt confusing because everything was explained step by step"
+      ],
+      care: [
+        "I was examined thoroughly and with proper attention",
+        "the care I received felt professional and well thought out",
+        "the doctor took my history carefully before suggesting anything",
+        "I felt well looked after during the whole consultation"
+      ],
+      privacy: [
+        "my privacy was respected throughout the visit",
+        "I could talk openly about a sensitive problem without feeling awkward",
+        "the environment felt discreet and comfortable",
+        "I felt comfortable sharing personal health details"
+      ],
+      clean: [
+        "the clinic was clean and well maintained",
+        "the waiting area was tidy and comfortable",
+        "hygiene was clearly taken care of",
+        "the whole place felt neat and organised"
+      ],
+      staff: [
+        "the staff were helpful and guided me properly",
+        "the front desk team was courteous and cooperative",
+        "the staff handled my appointment smoothly",
+        "everyone at the clinic was supportive and polite"
+      ],
+      value: [
+        "the consultation fee felt reasonable for the quality of care",
+        "I felt the visit was worth the money",
+        "the charges felt fair",
+        "the overall experience was good value"
+      ],
+      pharmacy: [
+        "getting my prescribed medicines was easy and convenient",
+        "the pharmacy staff were helpful and polite",
+        "the pharmacy service was quick and I did not have to wait long",
+        "the pharmacy staff explained clearly how to take the medicines"
+      ],
+      hospitality: [
+        "the hospitality was warm and I felt properly cared for",
+        "the quality of care was good and everything felt well organised",
+        "everyone treated me with respect and kindness",
+        "I felt welcome from the moment I walked in"
+      ],
+      location: [
+        "the clinic was easy to find and reach",
+        "parking was convenient and hassle free",
+        "the location is accessible, which made the visit easy",
+        "I did not face any trouble reaching the clinic or finding a place to park"
+      ],
+      lab: [
+        "the laboratory test facilities were convenient and saved me time",
+        "sample collection was smooth and the lab staff were careful",
+        "the lab was well managed and the process was clear",
+        "getting the tests done was easy and well organised"
+      ],
+      reception: [
+        "the reception team was polite and handled my registration smoothly",
+        "the waiting hall was clean and comfortable",
+        "the receptionist kept me informed while I waited",
+        "the front desk and waiting hall were well organised"
+      ],
+      surgery: [
+        "the procedure was explained clearly beforehand, which put me at ease",
+        "my recovery after surgery was well guided with proper follow-up",
+        "I am happy with the outcome of my procedure",
+        "the post-surgery care and instructions were clear and helpful"
+      ]
+    }
+  },
+  hi: {
+    cardLabel: "AAPKA REVIEW",
+    longLabel: "LAMBA", shortLabel: "CHHOTA",
+    hint: "Tip: jo review pasand aaye us par tap karein, phir post karne se pehle text ko apne visit ke hisaab se thoda badal lein.",
+    intros: [
+      "Maine haal hi mein Dr. Prabash Nayak se consultation liya.",
+      "Dr. Prabash Nayak ke clinic ka experience share kar rahe hain.",
+      "Hum Dr. Prabash Nayak ke paas consultation ke liye gaye the.",
+      "Dr. Prabash Nayak se consultation ke baad apna experience likh rahe hain."
+    ],
+    connectors: ["Saath hi,", "Iske alawa,", "Aur haan,", "Mujhe ye bhi pasand aaya ki", "Ek aur baat,"],
+    closers: [
+      "Cuttack mein urologist dhundh rahe logon ke liye ye ek achha option hai.",
+      "Dhanyavaad, Dr. Nayak aur poori team.",
+      "Overall experience se santusht hain.",
+      "Poori team ka support ke liye shukriya."
+    ],
+    // Used for the CHHOTA (short) review (1 or 2 phrases only)
+    shortIntros: [
+      "Dr. Prabash Nayak ke clinic ka experience achha raha.",
+      "Haal hi mein Dr. Prabash Nayak se mile.",
+      "Dr. Prabash Nayak ke visit se santusht hain."
+    ],
+    shortConnectors: ["Saath hi,", "Iske alawa,"],
+    shortClosers: ["Recommend karte hain.", "Dhanyavaad, Dr. Nayak aur team.", "Shukriya."],
+    phrases: {
+      behaviour: [
+        "doctor ka vyavhar bahut vinamra aur sammanjanak tha",
+        "Dr. Nayak ne meri baat dhyan se aur dhairya se suni",
+        "doctor ne bina jaldbaazi kiye meri samasya samjhi",
+        "doctor ka swabhav dostana tha aur shuru se hi comfortable laga"
+      ],
+      explanation: [
+        "meri samasya aur aage ke steps saral shabdon mein samjhaye gaye",
+        "mere sabhi sawaalon ke jawab saaf tareeke se diye gaye",
+        "doctor ne options samjhaye taaki faisla lene se pehle sab kuch samajh aaye",
+        "sab kuch step by step samjhaya gaya, kuch bhi confusing nahi laga"
+      ],
+      care: [
+        "meri achhe se jaanch ki gayi aur poora dhyan diya gaya",
+        "jo care mili wo professional aur soch-samajh kar di gayi lagi",
+        "kuch bhi suggest karne se pehle doctor ne meri history dhyan se li",
+        "poore consultation mein achhe se dekhbhaal hui"
+      ],
+      privacy: [
+        "poore visit mein meri privacy ka dhyan rakha gaya",
+        "sensitive samasya par bina jhijhak ke khulkar baat karna aasaan raha",
+        "mahaul discreet aur comfortable laga",
+        "apni personal health details batane mein comfortable mehsoos hua"
+      ],
+      clean: [
+        "clinic saaf-suthra aur achhe se maintain kiya hua tha",
+        "waiting area saaf aur aaramdayak tha",
+        "hygiene ka poora dhyan rakha gaya tha",
+        "poori jagah vyavasthit aur neat lagi"
+      ],
+      staff: [
+        "staff ne madad ki aur sahi tareeke se guide kiya",
+        "front desk team vinamra aur sahyogi thi",
+        "staff ne mera appointment aasaani se sambhal liya",
+        "clinic mein sabhi log supportive aur vinamra the"
+      ],
+      value: [
+        "consultation ki fees care ki quality ke hisaab se sahi lagi",
+        "mujhe laga ye visit paison ke hisaab se worth it thi",
+        "charges sahi lage",
+        "overall experience paisa vasool raha"
+      ],
+      pharmacy: [
+        "dawaiyan lena aasan aur convenient raha",
+        "pharmacy ke staff madadgaar aur vinamra the",
+        "pharmacy ki service tez thi aur zyada intezaar nahi karna pada",
+        "pharmacy staff ne dawaiyan kaise leni hain ye achhe se samjhaya"
+      ],
+      hospitality: [
+        "hospitality bahut achhi thi aur poori tarah dekhbhaal mehsoos hui",
+        "care ki quality achhi thi aur sab kuch vyavasthit laga",
+        "sabne mujhse izzat aur apnepan se baat ki",
+        "andar aate hi swagat jaisa mehsoos hua"
+      ],
+      location: [
+        "clinic dhundhna aur wahan pahunchna aasaan tha",
+        "parking ki suvidha convenient thi aur koi pareshani nahi hui",
+        "location accessible hai, jisse visit aasaan raha",
+        "clinic tak pahunchne ya parking dhundhne mein koi dikkat nahi aayi"
+      ],
+      lab: [
+        "laboratory test ki suvidha convenient thi aur time bacha",
+        "sample collection aasaani se hua aur lab staff ne dhyan rakha",
+        "lab achhe se managed thi aur process saaf thi",
+        "tests karwana aasaan aur vyavasthit raha"
+      ],
+      reception: [
+        "reception team vinamra thi aur registration aasaani se ho gaya",
+        "waiting hall saaf aur aaramdayak tha",
+        "intezaar ke dauran receptionist ne mujhe jaankari di",
+        "front desk aur waiting hall achhe se vyavasthit the"
+      ],
+      surgery: [
+        "procedure pehle se saaf tareeke se samjhayi gayi, jisse tasalli mili",
+        "surgery ke baad recovery mein sahi guidance aur follow-up mila",
+        "main apne procedure ke nateeje se santusht hoon",
+        "surgery ke baad ki care aur instructions saaf aur madadgaar the"
+      ]
+    }
+  },
+
+  /* Page text (English only). Change for another business. */
+  ui: {
+    copyLabel: "Copy & paste on Google",
+    copiedLabel: "Copied!",
+    copiedStatus: "Review copied to clipboard",
+    saveFile: "Urekka-Health-Care-Dr-Prabash-Nayak.vcf",
+    followLabel: "Follow on Instagram",
+    followFallbackLabel: "Message on WhatsApp",
+    reviewLabel: "Leave a Review",
+    footerWithSocial: "Follow us on social media for updates, and leave a review to help other patients find trusted care.",
+    footerNoSocial: "Message us on WhatsApp for appointments, and leave a review to help other patients find trusted care.",
+    // Only facts supplied by the client. Add or edit paragraphs for another business.
+    story: [
+      "Dr. Prabash Nayak, a urologist surgeon and andrologist, sees patients at Urekka Health Care in Mahanadi Vihar, Cuttack. He completed his MBBS at MKCG Medical College.",
+      "Earlier in his career, he worked as a consultant urologist and andrologist at B L Kapoor Hospital, New Delhi, and Charnock Hospital, Kolkata. He speaks English, Hindi, Odia and Bengali."
+    ]
+  }
+};
+
+/* =====================================================================
+   Code below needs no changes for a new business.
+   ===================================================================== */
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var state = { selected: new Set(["all"]), lang: "en", reviews: { long: "", short: "" }, pick: "long", copyTimer: null };
+  function intl(n) { return "+91" + n; }
+  function nice(n) { return "+91 " + n.slice(0, 5) + " " + n.slice(5); }
+  var allPhones = [CONFIG.phone].concat(CONFIG.morePhones || []);
+  var waLink = "https://wa.me/91" + CONFIG.phone + "?text=" + encodeURIComponent(CONFIG.waText);
+  var q = encodeURIComponent(CONFIG.name + ", " + CONFIG.fullAddress);
+
+  /* ---------- helpers ---------- */
+  function shuffle(a) {
+    var arr = a.slice();
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  /* ---------- static content from CONFIG ---------- */
+  function renderStatic() {
+    document.querySelectorAll("[data-bind]").forEach(function (n) { n.textContent = CONFIG[n.getAttribute("data-bind")]; });
+
+    var slot = $("logoSlot");
+    if (CONFIG.logoSrc) {
+      var img = el("img", "logo");
+      img.src = CONFIG.logoSrc; img.alt = CONFIG.logoAlt || (CONFIG.brandFull + " logo"); img.width = 104; img.height = 104;
+      slot.appendChild(img);
+    } else {
+      slot.innerHTML =
+        '<svg class="logo" viewBox="0 0 92 92" role="img" aria-label="' + CONFIG.brandFull + ' logo">' +
+        '<circle cx="46" cy="46" r="46" fill="#ffffff"/>' +
+        '<circle cx="46" cy="46" r="42" fill="none" stroke="#3E9FA8" stroke-width="2"/>' +
+        '<text x="43" y="57" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="30" font-weight="700" fill="#2E3A3F">' + CONFIG.initials + '</text>' +
+        '<path d="M70 14h6v6h6v6h-6v6h-6v-6h-6v-6h6z" fill="#4CAF50"/></svg>';
+    }
+
+    $("addressText").textContent = CONFIG.fullAddress + ", " + CONFIG.country;
+    $("mapFrame").src = "https://www.google.com/maps?q=" + q + "&output=embed";
+    $("mapLink").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+
+    var story = $("story");
+    story.appendChild(el("h2", "", "Our Story"));
+    COPY.ui.story.forEach(function (p) { story.appendChild(el("p", "", p)); });
+
+    var hasIG = !!CONFIG.instagram;
+    var follow = $("footFollow");
+    follow.href = hasIG ? CONFIG.instagram : waLink;
+    follow.textContent = hasIG ? COPY.ui.followLabel : COPY.ui.followFallbackLabel;
+    $("footText").textContent = hasIG ? COPY.ui.footerWithSocial : COPY.ui.footerNoSocial;
+    $("footReview").href = CONFIG.googleReviewLink;
+    $("footReview").textContent = COPY.ui.reviewLabel;
+    $("copyright").textContent = "© " + new Date().getFullYear() + " " + CONFIG.brandFull + ". All rights reserved.";
+  }
+
+  /* ---------- icon tiles + number chips ---------- */
+  var ICONS = {
+    instagram: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>',
+    facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+    whatsapp: '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>',
+    call: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+    google: '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+    website: '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'
+  };
+  function renderTiles() {
+    var items = [
+      { key: "instagram", label: "Instagram",   href: CONFIG.instagram,      aria: "Open Instagram" },
+      { key: "facebook",  label: "Facebook",    href: CONFIG.facebook,       aria: "Open Facebook" },
+      { key: "whatsapp",  label: "WhatsApp",    href: waLink,                aria: "Chat on WhatsApp" },
+      { key: "call",      label: "Call Us",     href: "tel:" + intl(CONFIG.phone), aria: "Call " + nice(CONFIG.phone), internal: true },
+      { key: "google",    label: "Google Page", href: CONFIG.googlePageLink, aria: "Open Google Business page" },
+      { key: "website",   label: "Website",     href: CONFIG.website,        aria: "Open website" }
+    ];
+    var box = $("tiles");
+    items.forEach(function (it) {
+      if (!it.href) return;                       // empty link = tile hidden
+      var a = el("a", "tile");
+      a.href = it.href;
+      a.setAttribute("aria-label", it.aria);
+      if (!it.internal) { a.target = "_blank"; a.rel = "noopener"; }
+      a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[it.key] + '</svg><span>' + it.label + '</span>';
+      box.appendChild(a);
+    });
+
+    var nums = $("numbers");
+    allPhones.forEach(function (n) {
+      var a = el("a", "num");
+      a.href = "tel:" + intl(n);
+      a.setAttribute("aria-label", "Call " + nice(n));
+      a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS.call + '</svg><span>' + nice(n) + '</span>';
+      nums.appendChild(a);
+    });
+  }
+
+  /* ---------- pills ---------- */
+  function renderPills() {
+    var ul = $("pills");
+    ul.innerHTML = "";
+    CATEGORIES.forEach(function (c) {
+      var li = el("li");
+      var b = el("button", "pill", c.label);
+      b.type = "button";
+      b.dataset.id = c.id;
+      b.setAttribute("aria-pressed", state.selected.has(c.id) ? "true" : "false");
+      b.addEventListener("click", function () { togglePill(c.id); });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+  }
+  function togglePill(id) {
+    if (id === "all") {
+      state.selected = new Set(["all"]);               // "All" is exclusive
+    } else {
+      state.selected.delete("all");                    // any other pill clears "All"
+      if (state.selected.has(id)) state.selected.delete(id); else state.selected.add(id);
+      if (state.selected.size === 0) state.selected.add("all");   // empty falls back to All
+    }
+    document.querySelectorAll("#pills .pill").forEach(function (b) {
+      b.setAttribute("aria-pressed", state.selected.has(b.dataset.id) ? "true" : "false");
+    });
+    generate();
+  }
+
+  /* ---------- review generation ---------- */
+  function pool() {
+    return state.selected.has("all")
+      ? CATEGORIES.filter(function (c) { return c.id !== "all"; }).map(function (c) { return c.id; })
+      : Array.from(state.selected);
+  }
+  // LONG review: intro + up to 4 phrases + closer
+  function buildLong() {
+    var L = COPY[state.lang];
+    var ids = shuffle(pool()).slice(0, 4);
+    var parts = ids.map(function (id) { return pick(L.phrases[id]); });
+    var conns = shuffle(L.connectors);
+    var text = pick(L.intros) + " " + cap(parts[0]) + ".";
+    for (var i = 1; i < parts.length; i++) text += " " + conns[i - 1] + " " + parts[i] + ".";
+    return text + " " + pick(L.closers);
+  }
+  // SHORT review: short intro + 1 or 2 phrases + short closer
+  function buildShort() {
+    var L = COPY[state.lang];
+    var ids = shuffle(pool()).slice(0, 2);
+    var parts = ids.map(function (id) { return pick(L.phrases[id]); });
+    var text = pick(L.shortIntros) + " " + cap(parts[0]) + ".";
+    if (parts[1]) text += " " + pick(L.shortConnectors) + " " + parts[1] + ".";
+    return text + " " + pick(L.shortClosers);
+  }
+  function generate() {
+    ["long", "short"].forEach(function (kind) {
+      var make = kind === "long" ? buildLong : buildShort;
+      var t = make(), tries = 0;
+      while (t === state.reviews[kind] && tries++ < 12) t = make();   // avoid showing the same text twice in a row
+      state.reviews[kind] = t;
+      $(kind === "long" ? "textLong" : "textShort").textContent = t;
+    });
+  }
+  function applyPick() {
+    $("cardLong").classList.toggle("sel", state.pick === "long");
+    $("cardShort").classList.toggle("sel", state.pick === "short");
+  }
+  document.querySelectorAll('input[name="reviewPick"]').forEach(function (r) {
+    r.addEventListener("change", function () { state.pick = r.value; applyPick(); });
+  });
+  // On page open: pre-select 2 or 3 random categories so every visit shows a different review
+  function autoSelect() {
+    var ids = CATEGORIES.filter(function (c) { return c.id !== "all"; }).map(function (c) { return c.id; });
+    var n = 2 + Math.floor(Math.random() * 2);
+    state.selected = new Set(shuffle(ids).slice(0, n));
+  }
+
+  /* ---------- language switch ---------- */
+  function applyLang() {
+    var hi = state.lang === "hi";
+    $("langSwitch").setAttribute("aria-checked", hi ? "true" : "false");
+    $("lblEn").classList.toggle("on", !hi);
+    $("lblHi").classList.toggle("on", hi);
+    $("reviewLabel").textContent = COPY[state.lang].cardLabel;
+    $("tagLong").textContent = COPY[state.lang].longLabel;
+    $("tagShort").textContent = COPY[state.lang].shortLabel;
+    $("reviewHint").textContent = COPY[state.lang].hint;
+    document.documentElement.setAttribute("lang", "en");          // Hinglish is Latin-script; keep lang=en
+  }
+  $("langSwitch").addEventListener("click", function () {
+    state.lang = state.lang === "en" ? "hi" : "en";
+    applyLang();
+    generate();
+  });
+  $("shuffleBtn").addEventListener("click", generate);
+
+  /* ---------- copy + open Google ---------- */
+  function legacyCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+    document.body.appendChild(ta);
+    ta.select(); ta.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+  $("copyBtn").addEventListener("click", function () {
+    var btn = $("copyBtn");
+    var done = copyText(state.reviews[state.pick]);              // copies whichever review (long/short) is selected
+    if (CONFIG.googleReviewLink) window.open(CONFIG.googleReviewLink, "_blank", "noopener");
+    done.then(function (ok) {
+      if (!ok) return;
+      btn.textContent = COPY.ui.copiedLabel;
+      $("copyStatus").textContent = COPY.ui.copiedStatus;
+      clearTimeout(state.copyTimer);
+      state.copyTimer = setTimeout(function () {
+        btn.textContent = COPY.ui.copyLabel;
+        $("copyStatus").textContent = "";
+      }, 2000);
+    });
+  });
+
+  /* ---------- vCard 3.0 download ---------- */
+  function esc(s) { return String(s).replace(/\\/g, "\\\\").replace(/\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;"); }
+  $("saveContact").addEventListener("click", function () {
+    var lines = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "N:" + esc(CONFIG.vcardLast) + ";" + esc(CONFIG.vcardFirst) + ";;" + esc(CONFIG.vcardPrefix) + ";",
+      "FN:" + esc(CONFIG.name),
+      "ORG:" + esc(CONFIG.brandFull),
+      "TITLE:" + esc(CONFIG.type)
+    ];
+    allPhones.forEach(function (n, i) { lines.push("TEL;TYPE=" + (i === 0 ? "CELL,VOICE,PREF" : "CELL,VOICE") + ":" + intl(n)); });
+    lines.push("URL:" + (CONFIG.website || CONFIG.googlePageLink));
+    lines.push("ADR;TYPE=WORK:;;" + esc(CONFIG.street) + ";" + esc(CONFIG.city) + ";" + esc(CONFIG.region) + ";" + esc(CONFIG.postal) + ";" + esc(CONFIG.country));
+    lines.push("END:VCARD");
+    var blob = new Blob([lines.join("\r\n") + "\r\n"], { type: "text/vcard;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = COPY.ui.saveFile;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  /* ---------- init ---------- */
+  $("copyBtn").textContent = COPY.ui.copyLabel;
+  renderStatic();
+  renderTiles();
+  if (CONFIG.autoSelectOnOpen) autoSelect();
+  renderPills();
+  applyLang();
+  applyPick();
+  generate();
+})();
+</script>
+</body>
+</html>
